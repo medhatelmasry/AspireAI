@@ -1,0 +1,28 @@
+﻿@page
+@model IndexModel
+@inject IConfiguration _config
+@{
+    ViewData["Title"] = $"OpenAI and .NET Aspire with { _config["AI:AzureOrOpenAI"] } services";
+}
+<div class="text-center">
+    <h3 class="display-6">@ViewData["Title"]</h3>
+    <form method="post">
+        <input type="text" name="prompt" size="80" required />
+        <input type="submit" value="Submit" />
+    </form>
+        <div style="text-align: left; margin:30px;">
+            <h5 style="text-align:center;">Example prompts:</h5>
+            <p>How many planets are there is our solar system?</p>
+            <p>Which is the largest planet?</p>
+            <p>Which is the smallest planet?</p>
+            <p>Which is the closest planet to Earth?</p>
+            <p>Which is the furthest planet to Earth?</p>
+            <p>Why was pluto removed from the list of planets?</p>
+        </div>
+    <div>
+    @if (Model.Reply != null)
+    {
+        <p class="alert alert-success">@Model.Reply</p>
+    }
+    </div>
+</div>

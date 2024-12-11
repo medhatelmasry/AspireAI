@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesAI", "RazorPagesAI\RazorPagesAI.csproj", "{CFB11938-0A37-43FA-B697-F6A3FE65C8F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAI", "ConsoleAI\ConsoleAI.csproj", "{EA98B0E0-E9C9-4BBF-9922-FA96100D4A4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiLibrary", "AiLibrary\AiLibrary.csproj", "{8C5105FC-6DBA-4CB0-A964-D2028AB77016}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFB11938-0A37-43FA-B697-F6A3FE65C8F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB11938-0A37-43FA-B697-F6A3FE65C8F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB11938-0A37-43FA-B697-F6A3FE65C8F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB11938-0A37-43FA-B697-F6A3FE65C8F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA98B0E0-E9C9-4BBF-9922-FA96100D4A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA98B0E0-E9C9-4BBF-9922-FA96100D4A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA98B0E0-E9C9-4BBF-9922-FA96100D4A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA98B0E0-E9C9-4BBF-9922-FA96100D4A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C5105FC-6DBA-4CB0-A964-D2028AB77016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C5105FC-6DBA-4CB0-A964-D2028AB77016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C5105FC-6DBA-4CB0-A964-D2028AB77016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C5105FC-6DBA-4CB0-A964-D2028AB77016}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
