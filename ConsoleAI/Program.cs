@@ -9,6 +9,7 @@ var config = new ConfigurationBuilder()
     .Build();
 
 var azureOrOpenAI = config["AI:AzureOrOpenAI"] ?? "OpenAI";
+Console.WriteLine($"**** Using {azureOrOpenAI} services");
 
 var builder = Kernel.CreateBuilder();
 
@@ -53,23 +54,20 @@ var chat = kernel.GetRequiredService<IChatCompletionService>();
 var history = new ChatHistory();
 history.AddSystemMessage("You are a useful chatbot. You always reply with a single sentence.");
 
-Console.CancelKeyPress += (sender, e) =>
+List<string> questions = new List<string>
 {
-    e.Cancel = true;
-    Environment.Exit(0); // Exit the application immediately
+    "How many planets are there is our solar system?",
+    "Which is the largest planet?",
+    "Which is the smallest planet?",
+    "Which is the closest planet to Earth?",
+    "Which is the furthest planet to Earth?",
+    "Why was pluto removed from the list of planets?"
 };
 
-Console.WriteLine($"**** Using {azureOrOpenAI} services");
-
-while (true)
+foreach (var q in questions)
 {
-    Console.Write("Q (or exit): ");
-    var userQ = Console.ReadLine();
-    if (string.IsNullOrEmpty(userQ) || userQ.ToLower() == "exit")
-    {
-        Environment.Exit(0); // Exit the application immediately
-    }
-    history.AddUserMessage(userQ);
+    Console.Write($"Q: {q}\n\tA: ");
+    history.AddUserMessage(q);
 
     var settings = new PromptExecutionSettings();
     var result = chat.GetStreamingChatMessageContentsAsync(history, settings, kernel);
